@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,9 +22,13 @@ Route::middleware([
 
     ])->group(function () {
          Route::get('/dashboard', function () {
-           if (auth()->user()->is_admin == 1) {
+           if (auth()->user()->role == 1) {
             return redirect()->route('Admindashboard');
-           }else{
+           }
+           else if (auth()->user()->role == 2) {
+            return redirect()->route('Eventdashboard');
+           }
+           else{
             return redirect()->route('user-dashboard');
            }
          })->name('userdashboard');
@@ -35,6 +39,15 @@ Route::middleware([
         Route::get('/Admindashboard', function(){
             return view('admin.index');
         })->name('Admindashboard');
+
+
+
+     });
+
+     Route::prefix('event')->middleware('event')->group(function(){
+        Route::get('/Eventdashboard', function(){
+            return view('event-coordinator.index');
+        })->name('Eventdashboard');
 
 
 
