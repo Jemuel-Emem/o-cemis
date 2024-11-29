@@ -15,7 +15,7 @@ class admin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->user()->is_admin==true){
+        if(auth()->user()->role==1){
             return $next($request);
             }
             return redirect('dashboard')->with('error','You haved no admin access');
