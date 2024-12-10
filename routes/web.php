@@ -40,6 +40,14 @@ Route::middleware([
             return view('admin.index');
         })->name('Admindashboard');
 
+        Route::get('/add-event', function(){
+            return view('admin.add-event');
+        })->name('admin.add-event');
+
+        Route::get('/new-register', function(){
+            return view('admin.new-register');
+        })->name('admin.newregister');
+
 
 
      });
@@ -57,6 +65,10 @@ Route::middleware([
         Route::get('/dashboard', function(){
                return view('user.index');
            })->name('user-dashboard');
+
+           Route::get('/news', function(){
+            return view('user.news');
+        })->name('user-news');
 
 
 

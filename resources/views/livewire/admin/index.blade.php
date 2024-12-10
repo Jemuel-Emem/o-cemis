@@ -7,7 +7,7 @@
                 <i class="ri-heart-2-line"></i>
             </div>
             <div class="ml-4">
-                <h2 class="text-xl font-bold text-gray-700">Weddings</h2>
+                <h2 class="text-xl font-bold text-gray-700">New Register</h2>
                 <p class="text-3xl font-bold text-cyan-700">25</p>
             </div>
         </div>
@@ -17,7 +17,7 @@
                 <i class="ri-water-flash-line"></i>
             </div>
             <div class="ml-4">
-                <h2 class="text-xl font-bold text-gray-700">Baptisms</h2>
+                <h2 class="text-xl font-bold text-gray-700">News and Update</h2>
                 <p class="text-3xl font-bold text-orange-500">40</p>
             </div>
         </div>
@@ -28,14 +28,14 @@
                 <i class="ri-group-line"></i>
             </div>
             <div class="ml-4">
-                <h2 class="text-xl font-bold text-gray-700">Fellowships</h2>
+                <h2 class="text-xl font-bold text-gray-700">Alumni</h2>
                 <p class="text-3xl font-bold text-cyan-500">15</p>
             </div>
         </div>
     </div>
 
 
-    <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-md">
+    {{-- <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-md">
         <div class="p-4 bg-cyan-700 text-white font-bold text-lg">Upcoming Events</div>
         <table class="w-full text-sm text-left text-gray-700">
             <thead class="text-xs text-gray-600 uppercase bg-gray-100">
@@ -79,5 +79,5 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> --}}
 </div>

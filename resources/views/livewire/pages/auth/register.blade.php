@@ -22,19 +22,21 @@ new #[Layout('layouts.guest')] class extends Component
     public function register(): void
     {
         $validated = $this->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
-        ]);
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+        'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
+    ]);
 
-        $validated['password'] = Hash::make($validated['password']);
+    $validated['password'] = Hash::make($validated['password']);
+    $validated['is_approved'] = false; // Set approval status to false
 
-        event(new Registered($user = User::create($validated)));
+    event(new Registered($user = User::create($validated)));
 
-        Auth::login($user);
+    Auth::login($user);  // Log the user in, but they won't be able to do anything until approved
 
-        $this->redirect(RouteServiceProvider::HOME, navigate: true);
-    }
+    $this->redirect(RouteServiceProvider::HOME, navigate: true);
+}
+
 }; ?>
 
 <div>

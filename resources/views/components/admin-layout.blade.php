@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>O-CEMIS</title>
+    <title>ALUMNI</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -40,40 +40,45 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased h-screen bg-gradient-to-b from-cyan-500 to-white">
+<body class="font-sans antialiased h-screen bg-gradient-to-b from-green-800 to-white">
     @livewireScripts
 
     <!-- Sidebar -->
-    <aside class="sidebar fixed top-0 left-0 h-full bg-cyan-700 text-white flex flex-col">
-        <div class="flex items-center justify-center h-20 bg-cyan-900">
+    <aside class="sidebar fixed top-0 left-0 h-full bg-green-700 text-white flex flex-col">
+        <div class="flex items-center justify-center h-20 bg-green-900">
             <a href="/" class="flex items-center gap-2">
-                <img src="{{ asset('images/church.png') }}" alt="Logo" class="w-12 h-12">
-                <span id="logo" class="text-orange-500 text-2xl">O-CEMIS</span>
+                <img src="{{ asset('images/logona.jpg') }}" alt="Logo" class="w-12 h-12 rounded-3xl">
+                <span id="logo" class="text-green-500 text-2xl">ALUMNI</span>
             </a>
         </div>
         <nav class="flex flex-col px-4 py-6 space-y-4">
-            <a href="" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
+            <a href="{{ route('Admindashboard') }}" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
                 <i class="ri-calendar-check-line text-xl"></i>
                 <span class="ml-3 text-sm font-bold">Dashboard</span>
             </a>
-            <a href="" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
+
+            {{-- <a href="{{ route('admin.add-event') }}" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
                 <i class="ri-calendar-event-line text-xl"></i>
                 <span class="ml-3 text-sm font-bold">Events</span>
+            </a> --}}
+            <a href="{{ route('admin.newregister') }}" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
+                <i class="ri-calendar-event-line text-xl"></i>
+                <span class="ml-3 text-sm font-bold">New Register</span>
             </a>
             <a href="" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
                 <i class="ri-file-history-fill text-xl"></i>
-                <span class="ml-3 text-sm font-bold">Appointment</span>
+                <span class="ml-3 text-sm font-bold">Alumni Profile</span>
             </a>
 
-            <a href="" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
+            <a href="{{ route('admin.add-event') }}" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
                 <i class="ri-bank-card-fill text-xl"></i>
-                <span class="ml-3 text-sm font-bold">Payment/Billing</span>
+                <span class="ml-3 text-sm font-bold">News and Update</span>
             </a>
 
-            <a href="" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
+            {{-- <a href="" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
                 <i class="ri-file-history-fill text-xl"></i>
                 <span class="ml-3 text-sm font-bold">Records</span>
-            </a>
+            </a> --}}
         </nav>
         <div class="mt-auto px-4 py-4">
             <div class="flex items-center gap-3 justify-center">
