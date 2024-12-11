@@ -1,10 +1,10 @@
 <div class="p-6">
     <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-md">
-        <div class="p-4 bg-cyan-700 text-white font-bold text-lg">Alumni Profiles</div>
+
 
 
         <table class="w-full text-sm text-left text-gray-700">
-            <thead class="text-xs text-gray-600 uppercase bg-gray-100">
+            <thead class="text-xs text-gray-600 uppercase bg-green-100">
                 <tr>
                     <th scope="col" class="px-6 py-3">Full Name</th>
                     <th scope="col" class="px-6 py-3">Graduation Year</th>
