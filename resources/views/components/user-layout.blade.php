@@ -68,10 +68,10 @@
                 </button>
             </div>
 
-            <!-- Conditional navbar links -->
+
             <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
                 @if (Auth::check() && !Auth::user()->is_approved)
-                    <!-- Show only Status link for users that are not approved -->
+
                     <a href="#" class="px-2 py-2 text-sm text-white font-bold lg:px-6 md:px-3 hover:text-cyan-600 lg:ml-auto">
                         Status
                     </a>
@@ -80,10 +80,10 @@
                     <a href="{{ route('user-news') }}" class="px-2 py-2 text-sm text-white font-bold lg:px-6 md:px-3 hover:text-cyan-600 lg:ml-auto" href="#">
                         News and Updates
                     </a>
-                    <a href="" class="px-2 py-2 text-sm text-white font-bold lg:px-6 md:px-3 hover:text-cyan-600" href="#">
+                    <a href="{{ route('user-status') }}" class="px-2 py-2 text-sm text-white font-bold lg:px-6 md:px-3 hover:text-cyan-600" href="#">
                         Status
                     </a>
-                    <a href="" class="px-2 py-2 text-sm text-white font-bold lg:px-6 md:px-3 hover:text-cyan-600" href="#">
+                    <a href="{{ route('user-profile') }}" class="px-2 py-2 text-sm text-white font-bold lg:px-6 md:px-3 hover:text-cyan-600" href="#">
                         My Profile
                     </a>
                 @endif

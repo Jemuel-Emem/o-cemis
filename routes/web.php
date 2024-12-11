@@ -48,6 +48,10 @@ Route::middleware([
             return view('admin.new-register');
         })->name('admin.newregister');
 
+        Route::get('/profile', function(){
+            return view('admin.profile');
+        })->name('adminprofile');
+
 
 
      });
@@ -69,6 +73,15 @@ Route::middleware([
            Route::get('/news', function(){
             return view('user.news');
         })->name('user-news');
+
+
+        Route::get('/profile', function(){
+            return view('user.profile');
+        })->name('user-profile');
+
+        Route::get('/status', function(){
+            return view('user.status');
+        })->name('user-status');
 
 
 

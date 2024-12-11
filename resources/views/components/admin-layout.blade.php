@@ -65,7 +65,7 @@
                 <i class="ri-calendar-event-line text-xl"></i>
                 <span class="ml-3 text-sm font-bold">New Register</span>
             </a>
-            <a href="" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
+            <a href="{{ route('adminprofile') }}" class="flex items-center px-4 py-2 rounded hover:bg-cyan-600">
                 <i class="ri-file-history-fill text-xl"></i>
                 <span class="ml-3 text-sm font-bold">Alumni Profile</span>
             </a>
