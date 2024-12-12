@@ -44,7 +44,7 @@ class Profile extends Component
         // Pre-fill the form fields with the profile data if it exists
         if ($this->profile) {
             $this->name = $this->profile->name;
-            $this->number = $this->profile->number;
+            $this->phone = $this->profile->phone;
             $this->graduation_year = $this->profile->graduation_year;
             $this->program = $this->profile->program;
             $this->occupation = $this->profile->occupation;
@@ -64,7 +64,7 @@ class Profile extends Component
             ['user_id' => Auth::id()],
             [
                 'name' => $this->name,
-                'number' => $this->number,
+                'phone' => $this->phone,
                 'graduation_year' => $this->graduation_year,
                 'program' => $this->program,
                 'occupation' => $this->occupation,

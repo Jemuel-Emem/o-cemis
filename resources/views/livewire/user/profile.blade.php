@@ -95,7 +95,7 @@
                 <strong>Name:</strong> {{ $profile->name }}
             </div>
             <div>
-                <strong>Phone:</strong> {{ $profile->number }}
+                <strong>Phone:</strong> {{ $profile->phone }}
             </div>
             <div>
                 <strong>Graduation Year:</strong> {{ $profile->graduation_year }}
