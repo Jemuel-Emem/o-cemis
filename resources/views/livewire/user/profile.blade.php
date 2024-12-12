@@ -19,7 +19,7 @@
             <!-- Phone Number -->
             <div class="mb-4">
                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                <input type="tel" id="phone" wire:model="number" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required />
+                <input type="tel" id="phone" wire:model="phone" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required />
                 @error('phone') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
             </div>
 

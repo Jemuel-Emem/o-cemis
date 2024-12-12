@@ -7,7 +7,7 @@
         </div>
     @else
         <div class="mb-4 px-4 py-2 bg-yellow-100 text-yellow-700 rounded-lg">
-            You do not have a profile yet. Please <a href="{{ route('profile.create') }}" class="text-yellow-600 hover:text-yellow-800">create a profile</a>.
+            You do not have a profile yet. Please <a href="{{ route('user-profile') }}" class="text-yellow-600 hover:text-yellow-800">create a profile</a>.
         </div>
     @endif
 </div>
