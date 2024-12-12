@@ -25,7 +25,7 @@ class Profile extends Component
 
     protected $rules = [
         'name' => 'required|string|max:255',
-        'phone' => 'required|string|max:15',
+        'number' => 'required|string|max:15',
         'graduation_year' => 'required|integer|between:1980,2024',
         'program' => 'required|string|max:255',
         'occupation' => 'nullable|string|max:255',
@@ -44,7 +44,7 @@ class Profile extends Component
         // Pre-fill the form fields with the profile data if it exists
         if ($this->profile) {
             $this->name = $this->profile->name;
-            $this->phone = $this->profile->phone;
+            $this->number = $this->profile->number;
             $this->graduation_year = $this->profile->graduation_year;
             $this->program = $this->profile->program;
             $this->occupation = $this->profile->occupation;
@@ -64,7 +64,7 @@ class Profile extends Component
             ['user_id' => Auth::id()],
             [
                 'name' => $this->name,
-                'phone' => $this->phone,
+                'number' => $this->number,
                 'graduation_year' => $this->graduation_year,
                 'program' => $this->program,
                 'occupation' => $this->occupation,
